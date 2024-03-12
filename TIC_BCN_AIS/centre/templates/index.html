@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Welcome to TIC BCN Inicials!</h2>
+<p>Select a link to get started:</p>
+<ul>
+  <li><a href="{% url 'students' %}">Students</a></li>
+  <li><a href="{% url 'teachers' %}">Teachers</a></li>
+</ul>
+{% endblock %}

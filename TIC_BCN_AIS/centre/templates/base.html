@@ -1,0 +1,14 @@
+<!-- TIC_BCN_inicials/templates/base.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}TIC BCN Inicials{% endblock %}</title>
+</head>
+<body>
+  {% include 'header.html' %}
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+</body>
+</html>

@@ -1,11 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Alumnat</title>
-</head>
-<body>
-    <h1>Primer projecte - pàgina alumnat</h1>
-    <p>Benvinguts a l'app de prova</p>
-</body>
-</html>
+<!-- centre/templates/students.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>INFORMACI&Oacute; ALUMNAT TIC BARCELONA</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NOM</th>
+            <th>COGNOM</th>
+            <th>EDAT</th>
+            <th>ROLL</th>
+            <th>CURS</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="{% url 'student' 1 %}">1</a></td>
+            <td>Roger</td>
+            <td>Sobrino</td>
+            <td>39</td>
+            <td>student</td>
+            <td>DAM2B, DAW2A</td>
+        </tr>
+        <tr>
+            <td><a href="{% url 'student' 2 %}">2</a></td>
+            <td>Josep</td>
+            <td>Oriol Roca</td>
+            <td>25</td>
+            <td>student</td>
+            <td>DAW2B, DAW2A, DAW1A</td>
+        </tr>
+        <tr>
+            <td><a href="{% url 'student' 3 %}">3</a></td>
+            <td>Juanma</td>
+            <td>Biel</td>
+            <td>24</td>
+            <td>student</td>
+            <td>DAW2B, DAW2A</td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}
