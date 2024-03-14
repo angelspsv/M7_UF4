@@ -1,0 +1,36 @@
+<!-- centre/templates/students.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>INFORMACI&Oacute; ALUMNAT TIC BARCELONA</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NOM</th>
+            <th>ROLL</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Angel</td>
+            <td>student</td>
+            <td><a href="{% url 'student' 1 %}">+info</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Ramon</td>
+            <td>student</td>
+            <td><a href="{% url 'student' 2 %}">+info</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Laura</td>
+            <td>student</td>
+            <td><a href="{% url 'student' 3 %}">+info</a></td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}

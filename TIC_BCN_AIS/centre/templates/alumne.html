@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Alumne: {{ alumne.nom }} {{ alumne.cognom }}</h2>
+<p>Edat: {{ alumne.edat }}</p>
+<p>Rol: {{ alumne.rol }}</p>
+<p>Curs: {{ alumne.curs }}</p>
+<br>
+<a href="{% url 'students' %}">GO BACK</a>
+{% endblock %}
+
