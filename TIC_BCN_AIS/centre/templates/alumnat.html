@@ -8,36 +8,28 @@
         <tr>
             <th>ID</th>
             <th>NOM</th>
-            <th>COGNOM</th>
-            <th>EDAT</th>
             <th>ROLL</th>
-            <th>CURS</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td><a href="{% url 'student' 1 %}">1</a></td>
+            <td>1</td>
             <td>Angel</td>
-            <td>Ivanov</td>
-            <td>38</td>
             <td>student</td>
-            <td>DAW1, DAW2A</td>
+            <td><a href="{% url 'student' 1 %}">+info</a></td>
         </tr>
         <tr>
-            <td><a href="{% url 'student' 2 %}">2</a></td>
+            <td>2</td>
             <td>Ramon</td>
-            <td>Garcia</td>
-            <td>25</td>
             <td>student</td>
-            <td>DAW2A</td>
+            <td><a href="{% url 'student' 2 %}">+info</a></td>
         </tr>
         <tr>
-            <td><a href="{% url 'student' 3 %}">3</a></td>
+            <td>3</td>
             <td>Laura</td>
-            <td>Fernandez</td>
-            <td>24</td>
             <td>student</td>
-            <td>DAW2A</td>
+            <td><a href="{% url 'student' 3 %}">+info</a></td>
         </tr>
     </tbody>
 </table>
