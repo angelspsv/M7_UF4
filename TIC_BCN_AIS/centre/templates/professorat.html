@@ -1,0 +1,44 @@
+<!-- centre/templates/teachers.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>INFORMACI&Oacute; PROFESSORAT TIC BARCELONA</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NOM</th>
+            <th>COGNOM</th>
+            <th>EDAT</th>
+            <th>ROLL</th>
+            <th>CURS</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="{% url 'teacher' 1 %}">1</a></td>
+            <td>Roger</td>
+            <td>Sobrino</td>
+            <td>39</td>
+            <td>teacher</td>
+            <td>DAM2B, DAW2A</td>
+        </tr>
+        <tr>
+            <td><a href="{% url 'teacher' 2 %}">2</a></td>
+            <td>Pere</td>
+            <td>Guitart</td>
+            <td>57</td>
+            <td>teacher</td>
+            <td>DAW1</td>
+        </tr>
+        <tr>
+            <td><a href="{% url 'teacher' 3 %}">3</a></td>
+            <td>Juanma</td>
+            <td>Biel</td>
+            <td>50</td>
+            <td>teacher</td>
+            <td>DAW2B, DAW2A</td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}
