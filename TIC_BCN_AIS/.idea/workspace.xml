@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7fddaa8-cc97-490e-8bfc-61b5fd49f68b" name="Changes" comment="" />
+    <list default="true" id="f7fddaa8-cc97-490e-8bfc-61b5fd49f68b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/centre/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/centre/templates/new_user_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/centre/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/centre/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/centre/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/centre/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/centre/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/centre/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/centre/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/centre/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +26,9 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2dbHnpxKmz2gUFUfEVoE3ym7nJF" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -25,7 +37,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "form",
     "last_opened_file_path": "C:/Users/Lenovo/Desktop/TIC/M7/M7_UF4/M7_UF4/TIC_BCN_AIS"
   }
 }]]></component>
@@ -70,5 +82,15 @@
       <updated>1710270027562</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/centre/views.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
