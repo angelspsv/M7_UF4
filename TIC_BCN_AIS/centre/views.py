@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import Context, loader
-# Create your views here.
+from .forms import PersonForm
+
 
 def index(request):
     template = loader.get_template('index.html')
@@ -32,3 +33,8 @@ def teacher(request, pk):
     ]
     teacher = teachers[int(pk)-1]
     return render(request, 'professor.html', {'professor': teacher})
+
+def form(request):
+    form = PersonForm()
+    context = {'form':form}
+    return render(request, 'new_user_form.html', context)
