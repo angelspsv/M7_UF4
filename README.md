@@ -22,12 +22,15 @@
 ![Imatge del proces del registre del server](Register_server.jpg)
 
 
+
 + Captura de Register server connection
 ![Imatge de les dades de connexio durant el register server](Register_server_connection.jpg)
 
 
+
 + Captura de l'execucio de l'ordre de makemigrations
 ![Imatge de l'ordre makemigrations executada](makemigrations.jpg)
+
 
 
 + Captura de l'execucio de l'ordre migrate
@@ -41,7 +44,15 @@
 
 
 
+## Imatges de la pràctica 3 (FORM)
 
++ Captura del formulari creat i amb l'as_p mètode
+![Imatge del formulari creat i amb l'as_p mètode](formulari_as_p.jpg)
+
+
+
++ Captura del formulari creat sense l'as_p mètode
+![Imatge del formulari creat sense l'as_p mètode](formulari_sense_as_p.jpg)
 
 
 
