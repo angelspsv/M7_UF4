@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.template import loader
 from django.http import HttpResponse
 from.forms import PersonForm
+from .models import Persona
 
 
 def index(request):
@@ -44,3 +45,9 @@ def form(request):
 
     context = {'form':form}
     return render(request, 'new_user_form.html', context)
+
+# per fer una prova
+def display_data(request):
+    personas = Persona.objects.all()
+    context = {'personas': personas}
+    return render(request, 'display.html', context)

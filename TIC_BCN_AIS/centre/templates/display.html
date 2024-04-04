@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+# fitxer per fer proves
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Age</th>
+        <th>Role</th>
+        <th>Email</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for persona in personas %}
+        <tr>
+          <td>{{ persona.id }}</td>
+          <td>{{ persona.nom }}</td>
+          <td>{{ persona.cognom }}</td>
+          <td>{{ persona.edat }}</td>
+          <td>{{ persona.rol }}</td>
+          <td>{{ persona.email }}</td>
+          <td>{{ persona.telefon }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
