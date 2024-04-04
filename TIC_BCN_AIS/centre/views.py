@@ -1,7 +1,5 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-from django.template import Context, loader
-from .forms import PersonForm
+from django.shortcuts import render, redirect
+from.forms import PersonForm
 
 
 def index(request):
@@ -36,5 +34,11 @@ def teacher(request, pk):
 
 def form(request):
     form = PersonForm()
+    if request.method == 'POST':
+        form = PersonForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+
     context = {'form':form}
     return render(request, 'new_user_form.html', context)
