@@ -26,8 +26,10 @@ def student(request, pk):
     return render(request, 'alumne.html', {'alumne': student})
 
 def teachers(request):
-    teachers = "Teacher.objects.all()"
-    return render(request, 'professorat.html', {'teachers': teachers})
+    teachers = Persona.objects.filter(rol='professor')
+    context = {'teachers': teachers}
+    return render(request, 'professorat.html', context)
+
 
 def teacher(request, pk):
     teachers = [
