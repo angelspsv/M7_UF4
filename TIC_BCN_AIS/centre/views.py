@@ -9,9 +9,12 @@ def index(request):
     template = loader.get_template('index.html')
     return HttpResponse(template.render())
 
+
 def students(request):
-    students = "Student.objects.all()"
-    return render(request, 'alumnat.html', {'students': students})
+    students = Persona.objects.filter(rol='alumne')
+    context = {'students': students}
+    return render(request, 'alumnat.html', context)
+
 
 def student(request, pk):
     students = [
