@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>Professor: {{ professor.nom }} {{ professor.cognom }}</h2>
+<h4>Professor</h4>
+<p>Nom: {{ professor.nom }} {{ professor.cognom }}</p>
 <p>Edat: {{ professor.edat }}</p>
-<p>Rol: {{ professor.rol }}</p>
-<p>Curs: {{ professor.curs }}</p>
+<p>Email: {{ professor.email }}</p>
+<p>Telefon: {{ professor.telefon }}</p>
 <br>
-<a href="{% url 'teachers' %}">GO BACK</a>
+<button><a href="{% url 'teachers' %}">GO BACK</a></button>
+<button><a href="{% url 'update_teacher' professor.id %}">EDITAR</a></button>
+<button><a href="{% url 'delete_user' professor.id %}">BORRAR</a></button>
 {% endblock %}
 

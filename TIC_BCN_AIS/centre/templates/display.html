@@ -23,6 +23,10 @@
           <td>{{ persona.rol }}</td>
           <td>{{ persona.email }}</td>
           <td>{{ persona.telefon }}</td>
+          <td>
+              <button><a href="{% url 'update_user' persona.id %}">EDITAR</a></button>
+              <button><a href="{% url 'delete_user' persona.id %}">BORRAR</a></button>
+          </td>
         </tr>
       {% endfor %}
     </tbody>

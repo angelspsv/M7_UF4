@@ -17,12 +17,7 @@ def students(request):
 
 
 def student(request, pk):
-    students = [
-        {"nom": "Angel", "cognom": "Ivanov", "edat": "38", "rol": "alumne", "curs": "DAW1, DAW2A"},
-        {"nom": "Ramon", "cognom": "Garcia", "edat": "25", "rol": "alumne", "curs": "DAW2A"},
-        {"nom": "Laura", "cognom": "Fernandez", "edat": "24", "rol": "alumne", "curs": "DAW2A"}
-    ]
-    student = students[int(pk)-1]
+    student = Persona.objects.get(id = pk)
     return render(request, 'alumne.html', {'alumne': student})
 
 def teachers(request):
@@ -32,12 +27,7 @@ def teachers(request):
 
 
 def teacher(request, pk):
-    teachers = [
-        {"nom": "Roger", "cognom": "Sobrino", "edat": "39", "rol": "teacher", "curs": "DAM2B, DAW2A"},
-        {"nom": "Pere", "cognom": "Guitart", "edat": "57", "rol": "teacher", "curs": "DAW1"},
-        {"nom": "Juanma", "cognom": "Biel", "edat": "50", "rol": "teacher", "curs": "DAW2B, DAW2A"}
-    ]
-    teacher = teachers[int(pk)-1]
+    teacher = Persona.objects.get(id=pk)
     return render(request, 'professor.html', {'professor': teacher})
 
 def form(request):
@@ -53,7 +43,7 @@ def form(request):
 
 
 def display_data(request):
-    personas = Persona.objects.all()
+    personas = Persona.objects.all().order_by('id')
     context = {'personas': personas}
     return render(request, 'display.html', context)
 
@@ -70,3 +60,15 @@ def update_user(request, pk):
 
     context = {'form': form}
     return render(request, 'update_user_form.html', context)
+
+def delete_user(request, pk):
+
+
+    person = Persona.objects.get(id=pk)
+
+    if request.method == 'POST':
+        person.delete()
+        return redirect('index')
+
+    context = {'object':person}
+    return render(request, 'delete_user.html', context)
