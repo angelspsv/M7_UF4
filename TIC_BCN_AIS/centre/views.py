@@ -51,8 +51,22 @@ def form(request):
     context = {'form':form}
     return render(request, 'new_user_form.html', context)
 
-# per fer una prova
+
 def display_data(request):
     personas = Persona.objects.all()
     context = {'personas': personas}
     return render(request, 'display.html', context)
+
+
+def update_user(request, pk):
+    person = Persona.objects.get(id = pk)
+    form = PersonForm(instance=person)
+
+    if request.method == 'POST':
+        form = PersonForm(request.POST, instance=person)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+
+    context = {'form': form}
+    return render(request, 'update_user_form.html', context)
