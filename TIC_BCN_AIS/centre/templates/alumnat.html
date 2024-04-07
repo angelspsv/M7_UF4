@@ -3,34 +3,30 @@
 
 {% block content %}
 <h1>INFORMACI&Oacute; ALUMNAT TIC BARCELONA</h1>
-<table>
+  <table>
     <thead>
-        <tr>
-            <th>ID</th>
-            <th>NOM</th>
-            <th>ROLL</th>
-            <th></th>
-        </tr>
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Cognom</th>
+        <th>Edat</th>
+        <th>Rol</th>
+        <th>Email</th>
+        <th>Telefon</th>
+      </tr>
     </thead>
     <tbody>
+      {% for student in students %}
         <tr>
-            <td>1</td>
-            <td>Angel</td>
-            <td>student</td>
-            <td><a href="{% url 'student' 1 %}">+info</a></td>
+          <td><a href="{% url 'student' student.id %}">{{ student.id }}</a></td>
+          <td>{{ student.nom }}</td>
+          <td>{{ student.cognom }}</td>
+          <td>{{ student.edat }}</td>
+          <td>{{ student.rol }}</td>
+          <td>{{ student.email }}</td>
+          <td>{{ student.telefon }}</td>
         </tr>
-        <tr>
-            <td>2</td>
-            <td>Ramon</td>
-            <td>student</td>
-            <td><a href="{% url 'student' 2 %}">+info</a></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Laura</td>
-            <td>student</td>
-            <td><a href="{% url 'student' 3 %}">+info</a></td>
-        </tr>
+      {% endfor %}
     </tbody>
-</table>
+  </table>
 {% endblock %}

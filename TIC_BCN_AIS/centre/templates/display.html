@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Age</th>
+        <th>Role</th>
+        <th>Email</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for persona in personas %}
+        <tr>
+          <td>{{ persona.id }}</td>
+          <td>{{ persona.nom }}</td>
+          <td>{{ persona.cognom }}</td>
+          <td>{{ persona.edat }}</td>
+          <td>{{ persona.rol }}</td>
+          <td>{{ persona.email }}</td>
+          <td>{{ persona.telefon }}</td>
+          <td>
+              <button><a href="{% url 'update_user' persona.id %}">EDITAR</a></button>
+              <button><a href="{% url 'delete_user' persona.id %}">BORRAR</a></button>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

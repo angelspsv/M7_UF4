@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Eliminar usuari</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    <p>Segur que vols eliminar a {{object.nom}} {{object.cognom}}</p>
+    <button><a href="{% url 'display_data' %}">CANCELAR</a></button>
+    <input type="submit" value="CONFIRMAR">
+</form>
+
+{% endblock %}
